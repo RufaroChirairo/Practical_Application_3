@@ -1,5 +1,5 @@
 # Banking Model for Long Term Deposit Subscriptions 
-Notebook: link
+Notebook: [link](https://github.com/RufaroChirairo/Practical_Application_3/blob/main/Practical_Assignment_3.ipynb)
 
 ## Business Problem
 The business objective is to create a model that predicts whether a client will subscribe to a term deposit and identifies which characteristics influence the client's decision, in order to optimize the success of marketing campaigns. 
