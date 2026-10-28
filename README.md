@@ -12,14 +12,14 @@ The dataset contains information collected across 17 marketing campaigns, each u
 
 Initial data exploration revealed no missing values, so no additional data cleaning was required. Data preprocessing involved one-hot encoding 10 categorical columns and scaling the 10 numerical columns. The dataset was then split, reserving 25% for model evaluation.
 
-Four classification algorithms were implemented: Logistic Regression, K-Nearest Neighbors (KNN), Decision Tree Classifier, and Support Vector Classifier (SVC). A baseline performance was established by dividing the yes observations in the target column by the total observations. Initial models were then trained to establish basic performance, followed by hyperparameter optimization using GridSearchCV with three-fold cross-validation and ROC-AUC scoring. ROC-AUC was selected to evaluate each model's ability to distinguish between clients who subscribed and those who did not across different classification thresholds
+Four classification algorithms were implemented: Logistic Regression, K-Nearest Neighbors (KNN), Decision Tree Classifier, and Support Vector Classifier (SVC). A baseline performance was established by dividing the yes observations in the target column by the total observations. Initial models were then trained to establish basic performance, followed by hyperparameter optimization using GridSearchCV with three-fold cross-validation and ROC-AUC scoring. ROC-AUC was selected to evaluate each model's ability to distinguish between clients who subscribed and those who did not across different classification thresholds.
 
 ## Model Results
 Basic Models:
-Four classification models were evaluated before hyperparameter optimization. Logistic Regression achieved the highest test accuracy (91.51%), followed by SVC (91.37%). The Decision Tree achieved 100% training accuracy but only 89.04% test accuracy, suggesting overfitting.
+Four classification models were evaluated before hyperparameter optimization. Logistic Regression achieved the highest test accuracy (91.51%) with a training time of 0.22 seconds, followed by SVC (91.37%) with a training time of 11.83 seconds. KNN achieved 90.54% test accuracy in 0.04 seconds, while Decision Tree achieved 100% training accuracy but only 89.04% test accuracy, suggesting overfitting. 
 
 Optimized Models:
-GridSearchCV with three-fold cross-validation and ROC-AUC scoring was used to optimize model hyperparameters. Logistic Regression achieved the highest test ROC-AUC (94.23%), followed by SVC (93.94%), Decision Tree (93.36%), and KNN (91.17%
+GridSearchCV with three-fold cross-validation and ROC-AUC scoring was used to optimize model hyperparameters. Logistic Regression achieved the highest test ROC-AUC (94.23%) with a training time of 0.78 seconds, followed by SVC (93.94%) at 372.87 seconds. Decision Tree achieved a test ROC-AUC of 93.36% in 4.14 seconds, while KNN achieved 91.17% in 3.94 seconds.
 
 ## Conclusion
-Logistic Regression was the best-performing model, achieving the highest test ROC-AUC with relatively low training time. Further evaluation using precision, recall, and F1-score would help determine its effectiveness in identifying likely subscribers and reducing unnecessary marketing contacts# Practical_Application_3
+Logistic Regression was the best-performing model, achieving the highest test ROC-AUC with relatively low training time. Further evaluation using precision, recall, and F1-score would help determine its effectiveness in identifying likely subscribers and reducing unnecessary marketing contact.
